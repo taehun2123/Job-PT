@@ -1,0 +1,148 @@
+/* 상단바 css 불러오기 */
+@import url('header.css');
+
+/* 시퀸스별, 강사별 필터 */
+.hotmenu{
+  display: flex;
+  background-color: white;
+  width: 100%;
+  margin: var(--body-margin);
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.hot-item-now{
+  display: flex;
+  margin: 0;
+  width: 4em;
+  height: 1em;
+  padding: var(--body-margin);
+  background-color: lightblue;
+  border-radius: 10dvw;  
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.hot-item{
+  display: flex;
+  margin: 0;
+  width: 4em;
+  height: 1em;
+  padding: var(--body-margin);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* === 바디 CSS === */
+
+.sq-list{
+  width: 90%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  counter-reset: list;
+}
+.sq-item::before{
+  counter-increment: list;
+  content: counter(list,demical); /* Flex 요소 충돌로 인한 list-style 대체 */
+  font-size: 16px;
+  position: absolute;
+}
+
+.sq-item{
+  display: flex;
+  box-sizing: border-box;
+  border-top: 1px solid grey;
+  gap: 1em;
+  height: 7em;
+  text-align: left;
+  align-items: center;
+  align-content: center;
+  list-style-type: none;
+}
+
+.sq-item:last-child{
+  box-sizing: border-box;
+  border-bottom: 1px solid grey;
+}
+
+.sq-frame{
+  margin-left: 2em;
+  width: 5em;
+  height: 5em;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  overflow: hidden;
+  position: relative;
+}
+
+.sq-img{
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.sq-length{
+  font-size: var(--font-size-ssm);
+  margin: 0;
+  padding: 0;
+}
+
+.sq-name {
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.tc-list{
+  width: 90%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  counter-reset: list;
+}
+.tc-item::before{
+  counter-increment: list;
+  content: counter(list,demical); /* Flex 요소 충돌로 인한 list-style 대체 */
+  font-size: 16px;
+  position: absolute;
+}
+
+.tc-item{
+  display: flex;
+  box-sizing: border-box;
+  border-top: 1px solid grey;
+  gap: 1em;
+  height: 7em;
+  text-align: left;
+  align-items: center;
+  align-content: center;
+  list-style-type: none;
+}
+
+.tc-item:last-child{
+  box-sizing: border-box;
+  border-bottom: 1px solid grey;
+}
+
+.tc-frame{
+  margin-left: 2em;
+  width: 5em;
+  height: 5em;
+  border-radius: 70%;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  overflow: hidden;
+  position: relative;
+}
+
+.tc-img{
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
